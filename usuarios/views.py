@@ -36,3 +36,6 @@ def cadastro(request):
             user = User.objects.create_user(username=username, email=email, password=password, first_name=first_name)
             user.save()
             return HttpResponse("Usuário cadastrado com sucesso!")
+        
+def home(request):
+    return render(request, 'usuarios/home.html')
